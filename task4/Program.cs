@@ -61,7 +61,7 @@ namespace task4
         }
         static void Main(string[] args)
         {
-            FileStream f = new FileStream("c:\\input.txt", FileMode.Open);
+            FileStream f = new FileStream("input.txt", FileMode.OpenOrCreate);
             StreamReader r = new StreamReader(f);
             string s1 = r.ReadLine();
             string s2 = r.ReadLine();
@@ -93,7 +93,7 @@ namespace task4
                     people[2]= Convert.ToInt32(mas1[1, i]);
                 }
             }
-            FileStream f1 = new FileStream("c://output.txt", FileMode.Create);
+            FileStream f1 = new FileStream("output.txt", FileMode.Create);
             StreamWriter w = new StreamWriter(f1);
             foreach (double x in people)
             {
